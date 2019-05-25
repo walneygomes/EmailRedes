@@ -26,19 +26,13 @@ public class Email {
 		System.out.println("EMAIL:" + this.getEmpresa());
 		System.out.println(this.getTitulo());
 		System.out.println(this.getTexto());
-
-		while (true) {
-			for (int i = 0, j = 1, count = 0, valor = 100; i < this.getTexto().length(); i++, j++) {
-
-				while (count < valor) {
+			for (int i = 0,valor=100; i < this.getTexto().length(); i+=99) {
+			     for(int j = 0; j<valor; j++){
 					System.out.print(this.getTexto().charAt(i + j));
-					count++;
-
-				}
-				count=0;
-
-			}
+		
 		}
+				
+			}
 
 	}
 
