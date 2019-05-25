@@ -3,6 +3,8 @@ package Observer;
 import java.util.ArrayList;
 
 public class Email {
+        private Pessoa pessoa;
+	private int numeroNoticacao;
 	public ArrayList<String> informcaAmazenados = new ArrayList<String>();
 	private String nomeDono;
 	private int ano;
@@ -19,6 +21,8 @@ public class Email {
 		this.setTitulo(titulo);
 		this.setEmpresa(empresa);
 		informcaAmazenados.add(ano + "" + mes + titulo + texto + empresa);
+		numeroNoticacao++;
+		
 
 	}
 
@@ -40,7 +44,7 @@ public class Email {
 		for (String s : informcaAmazenados) {
 			System.out.println(s);
 		}
-
+		this.numeroNoticacao*0;
 	}
 
 	public String getNomeDono() {
